@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jarvis</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: cyan;
+      font-family: Arial;
+    }
+
+    #orb {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: cyan;
+      opacity: 0.4;
+      transition: 0.3s;
+    }
+
+    #orb.active {
+      opacity: 1;
+      box-shadow: 0 0 30px cyan;
+    }
+
+    #startBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* 🔥 FIXED UI (NO DESIGN CHANGE, ONLY POSITION FIX) */
+
+    #outputBox {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      font-size: 16px;
+      color: cyan;
+      max-width: 90%;
+      line-height: 1.4;
+      word-wrap: break-word;
+      pointer-events: none;
+    }
+
+    #moodBox {
+      position: fixed;
+      bottom: 60px; /* moved above output */
+      left: 10px;
+      font-size: 16px;
+      color: yellow;
+      font-weight: bold;
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="orb"></div>
+  <button id="startBtn">Start Jarvis</button>
+
+  <!-- 🔥 Functional elements (invisible but important) -->
+  <div id="moodBox"></div>
+  <div id="outputBox"></div>
+
+  <!-- IMPORTANT: script at bottom -->
+  <script src="app.js"></script>
+
+</body>
+</html>
